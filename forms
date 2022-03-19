@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Four Gen Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="forms.css">
+</head>
+
+<body>
+  <div id="content">
+    <header>
+      
+       <div class="logo-box">
+          <img class= "logo-box" src="https://cdn.glitch.global/ac30241c-fbbb-48e4-a145-abfef719cc2e/Four%20Generation.gif?v=1645293166792" alt="Logo">
+         <nav>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="site-plan.html">Site Plan</a></li>
+              <li><a href="how-to-do.html">How To Do</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+       </nav>
+      </div>
+    </header>
+    <main>
+         <div class="banner-box">
+            <img src="https://cdn.glitch.global/ac30241c-fbbb-48e4-a145-abfef719cc2e/banner-box.jpg?v=1646523159157" alt="banner-box"/>
+          <div class="action">
+            <h3>
+              Find your Ancestors!
+            </h3>
+          
+             <button><a href="contact.html">Contact Us</a></button></div>
+          </div>
+          
+      <div id="feedback"></div>
+              <h1>
+                 CONTACT US
+              </h1>
+           
+            <form>
+              
+              <div>
+                <label for="name">Name:</label>
+                  <input type="text" id="name" name="user_name" />
+              </div>
+              <div>
+                <label for="mail">E-mail:</label>
+                  <input type="email" id="mail" name="user_email" />
+              </div>
+              <div>
+                <label for="msg">Message:</label>
+                <textarea id="msg" name="user_message"></textarea>
+              </div>
+                   
+              
+              <button type="submit" value="submit" class="btn btn-success" >Send your message</button> 
+             
+           </form>
+           <script>
+              // get the feedback div element so we can do something with it.
+              const feedbackElement = document.getElementById('feedback');
+              // get the form so we can read what was entered in it.
+              const formElement = document.forms[0];
+              // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+              formElement.addEventListener('submit', function(e) {
+              // stop the form from doing the default action
+              e.preventDefault();
+              // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+              feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+              // make the feedback element visible.
+              feedbackElement.style.display = "block";
+              // add a class to move everything down so our message doesn't cover it.
+              document.body.classList.toggle('moveDown');
+              });
+              </script>
+       
+            
+   </main>
+        
+   <footer class= "footer">
+     
+      <div class= "copyright">
+          <p>
+            &copy; 2022 4 Gen Project - Maico Rodrigues - Section 
+          </p>
+      </div>
+     
+     
+      <div class="social">
+      
+          <a href="https://www.facebook.com/" >
+              <img src="https://byui-cit.github.io/wdd130/images/icons/color/facebook.png" alt="facebook"/>
+          </a> 
+          <a href="https://www.instagram.com/">
+              <img src="https://byui-cit.github.io/wdd130/images/icons/color/instagram.png" alt="instagram"/>
+          </a>
+          <a href="https://www.youtube.com/">
+              <img src="https://byui-cit.github.io/wdd130/images/icons/color/youtube.png" alt="youtube"/>
+          </a>
+     </div>
+  </footer>
+    
+  </div>
+</body>
+</html>
+ 
